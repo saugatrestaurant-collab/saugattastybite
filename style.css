@@ -165,7 +165,10 @@ ul {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 100dvh;
+    /* Dynamic viewport height for mobile browsers */
+    min-height: 600px;
+    /* Ensure content doesn't get squished */
     display: flex;
     align-items: center;
     position: relative;
@@ -494,6 +497,10 @@ ul {
     .about-grid {
         grid-template-columns: 1fr;
     }
+
+    .section-title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -523,9 +530,24 @@ ul {
         font-size: 2.5rem;
     }
 
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
+    }
+
+    /* Reduce padding for mobile */
+    .features,
+    .menu-section,
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-image {
+        height: 300px;
     }
 }
 
@@ -740,5 +762,24 @@ ul {
     .cart-sidebar {
         width: 100%;
         right: -100%;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .menu-item-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-item-price {
+        font-size: 1rem;
     }
 }
